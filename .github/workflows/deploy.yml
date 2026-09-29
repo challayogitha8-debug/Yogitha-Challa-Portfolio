@@ -48,6 +48,9 @@ jobs:
           echo "Checking Yogitha portfolio build output..."
           ls -la artifacts/yogitha-portfolio
           ls -la artifacts/yogitha-portfolio/dist
+          ls -la artifacts/yogitha-portfolio/dist/public
+          test -f artifacts/yogitha-portfolio/dist/public/index.html
+          echo "index.html found successfully!"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -55,7 +58,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./artifacts/yogitha-portfolio/dist
+          path: ./artifacts/yogitha-portfolio/dist/public
 
   deploy:
     environment:
