@@ -41,13 +41,13 @@ jobs:
         env:
           PORT: 4173
           BASE_PATH: /Yogitha-Challa-Portfolio/
-        run: pnpm run build
+        run: pnpm --dir artifacts/yogitha-portfolio build
 
       - name: Verify build output
         run: |
-          echo "Checking portfolio build output..."
-          ls -la artifacts/mockup-sandbox
-          ls -la artifacts/mockup-sandbox/dist
+          echo "Checking Yogitha portfolio build output..."
+          ls -la artifacts/yogitha-portfolio
+          ls -la artifacts/yogitha-portfolio/dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -55,7 +55,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./artifacts/mockup-sandbox/dist
+          path: ./artifacts/yogitha-portfolio/dist
 
   deploy:
     environment:
