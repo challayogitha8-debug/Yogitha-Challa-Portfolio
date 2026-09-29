@@ -180,7 +180,7 @@ function Hero() {
             <div className="font-mono-ui text-[.62rem] uppercase tracking-wider text-[hsl(var(--muted-foreground))]">currently learning</div>
             <div className="mt-1 font-semibold">One commit at a time</div>
           </div>
-          <img className="floaty relative z-10 w-full rounded-[2.5rem] object-cover mix-blend-multiply" src="/assets/characters/yogitha-home.png" alt="Illustrated Yogitha seated beside a laptop" data-testid="img-character-home" />
+          <img className="floaty relative z-10 w-full rounded-[2.5rem] object-cover mix-blend-multiply" src={`${import.meta.env.BASE_URL}assets/characters/yogitha-home.png`} alt="Illustrated Yogitha seated beside a laptop" data-testid="img-character-home" />
           <div className="absolute -bottom-4 left-4 z-20 rounded-2xl bg-[hsl(var(--foreground))] px-4 py-3 text-[hsl(var(--background))] shadow-xl">
             <div className="font-mono-ui text-[.6rem] uppercase tracking-wider opacity-60">focus</div>
             <div className="font-display text-xl">Human-first UI</div>
@@ -200,7 +200,7 @@ function About() {
       <div className="section-wrap grid items-center gap-12 lg:grid-cols-[.72fr_1fr]">
         <div className="reveal relative order-2 mx-auto max-w-[350px] lg:order-1">
           <div className="absolute -inset-5 rounded-[45%] bg-white/75" />
-          <img className="floaty delay-1 relative w-full rounded-[2rem] mix-blend-multiply" src="/assets/characters/yogitha-about.png" alt="Illustrated Yogitha standing with a backpack" data-testid="img-character-about" />
+          <img className="floaty delay-1 relative w-full rounded-[2rem] mix-blend-multiply" src={`${import.meta.env.BASE_URL}assets/characters/yogitha-about.png`} alt="Illustrated Yogitha standing with a backpack" data-testid="img-character-about" />
           <div className="absolute bottom-4 -right-4 rounded-2xl border border-white bg-white/90 px-4 py-3 shadow-xl">
             <div className="font-mono-ui text-[.6rem] uppercase tracking-wider text-[hsl(var(--muted-foreground))]">based in</div>
             <div className="font-semibold">Tirupati, India</div>
@@ -294,7 +294,7 @@ function Projects() {
           <SectionHeading label="Selected work" title="Small projects, " accent="carefully made." />
           <div className="reveal relative mx-auto w-44 lg:mx-0 lg:justify-self-end">
             <div className="absolute -inset-3 rounded-[42%] bg-[#e5dcff]" />
-            <img className="relative w-full rounded-[1.4rem] mix-blend-multiply" src="/assets/characters/yogitha-projects.png" alt="Illustrated Yogitha working at a desk" data-testid="img-character-projects" />
+            <img className="relative w-full rounded-[1.4rem] mix-blend-multiply" src={`${import.meta.env.BASE_URL}assets/characters/yogitha-projects.png`} alt="Illustrated Yogitha working at a desk" data-testid="img-character-projects" />
           </div>
         </div>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -378,7 +378,7 @@ function Contact() {
           <div>
             <SectionHeading label="Say hello" title="Let&apos;s make the next" accent="thing better." />
             <p className="reveal mt-7 max-w-md text-lg leading-relaxed text-[hsl(var(--muted-foreground))]">Interested in internships, software development opportunities, collaborations, or a thoughtful project? I&apos;d love to hear from you.</p>
-            <div className="reveal mt-8 max-w-[330px]"><img className="floaty delay-2 w-full mix-blend-multiply" src="/assets/characters/yogitha-contact.png" alt="Illustrated Yogitha waving hello" data-testid="img-character-contact" /></div>
+            <div className="reveal mt-8 max-w-[330px]"><img className="floaty delay-2 w-full mix-blend-multiply" src={`${import.meta.env.BASE_URL}assets/characters/yogitha-contact.png`} alt="Illustrated Yogitha waving hello" data-testid="img-character-contact" /></div>
           </div>
           <div className="glass rounded-[2rem] p-5 sm:p-8">
             <form onSubmit={submit} noValidate className="space-y-5" aria-label="Contact Yogitha">
