@@ -39,7 +39,8 @@ jobs:
 
       - name: Build portfolio
         env:
-             PORT: 4173
+          PORT: 4173
+          BASE_PATH: /Yogitha-Challa-Portfolio/
         run: pnpm run build
 
       - name: Setup Pages
