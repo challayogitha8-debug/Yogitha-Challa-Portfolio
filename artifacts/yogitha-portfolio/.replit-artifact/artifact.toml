@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Yogitha Challa Portfolio"
+description = "A polished personal portfolio for Yogitha Challa, showcasing her frontend work, software development internship, skills, certifications, education, and contact details with a distinctive illustrated visual identity."
+version = "1.0.0"
+id = "artifacts/yogitha-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18889
+
+[services.development]
+run = "pnpm --filter @workspace/yogitha-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/yogitha-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/yogitha-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18889"
+BASE_PATH = "/"
