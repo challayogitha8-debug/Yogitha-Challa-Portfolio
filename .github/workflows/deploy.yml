@@ -43,13 +43,19 @@ jobs:
           BASE_PATH: /Yogitha-Challa-Portfolio/
         run: pnpm run build
 
+      - name: Verify build output
+        run: |
+          echo "Checking portfolio build output..."
+          ls -la artifacts/mockup-sandbox
+          ls -la artifacts/mockup-sandbox/dist
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./artifacts/mockup-sandbox/dist
 
   deploy:
     environment:
